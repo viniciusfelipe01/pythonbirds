@@ -32,7 +32,7 @@ class Fase():
         :param intervalo_de_colisao:
         """
         self.intervalo_de_colisao = intervalo_de_colisao
-        self._passaros = []
+        self._passaros = [] #quando comeca um atributo com _ indica que nao devemos acessar esse atributo
         self._porcos = []
         self._obstaculos = []
 
@@ -43,7 +43,7 @@ class Fase():
 
         :param obstaculos:
         """
-        pass
+        self._obstaculos.extend(obstaculos)
 
     def adicionar_porco(self, *porcos):
         """
@@ -51,7 +51,7 @@ class Fase():
 
         :param porcos:
         """
-        pass
+        self._porcos.extend(porcos)
 
     def adicionar_passaro(self, *passaros):
         """
@@ -59,7 +59,7 @@ class Fase():
 
         :param passaros:
         """
-        pass
+        self._passaros.extend(passaros)
 
     def status(self):
         """
